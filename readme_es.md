@@ -70,13 +70,13 @@ Donde:
   - $G_a [dBi]$: ganancia de la antena
 ### Cálculo de enlace
 A partir del cálculo de la distancia entre los extremos del enlace (y cada uno de los puntos intermedios), los radios superior e inferior de Fresnel (con sus respectivas inclinaciones) y la altura aparente de los obstáculos, se calcula la altura que deben tener las antenas, de modo que ningún obstáculo pueda superar la línea de vista del enlace punto a punto, en conjunto con el porcentaje del radio inferior de Fresnel que debe permanecer visible:
-$$ h_A = r_i + (r_l - r_i) \cdot (1 - {\frac{\%}{100}}) $$
+$$ h_A = r_i + (r_l - r_i) \cdot (1 - { p_r \over 100}) $$
 
 Donde:
   - $h_A [m]$: altura de las antenas
   - $r_i [m]$: radio inferior de Fresnel
   - $r_l [m]$: linea de vista
-  - $\%$: porcentaje de radio libre
+  - $p_r$: porcentaje de radio libre
 
 Finalmente, se calcula la potencia de recepción del enlace de la siguiente manera:
 $$P_r = EIRP - 20 \cdot log({4 \pi d \over \lambda}) + G_r$$

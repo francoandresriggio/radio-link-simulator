@@ -70,13 +70,13 @@ Where:
   - $G_a [dBi]$: antenna gain
 ### Link Calculation
 From the calculation of the distance between the link's endpoints (and each of the intermediate points), the upper and lower Fresnel radii (with their respective inclinations), and the apparent height of obstacles, the required antenna height is determined to ensure that no obstacle surpasses the line-of-sight of the point-to-point link, along with the required clearance percentage of the lower Fresnel radius:
-$$ h_A = r_i + (r_l - r_i) \cdot (1 - {\frac{\%}{100}}) $$
+$$ h_A = r_i + (r_l - r_i) \cdot (1 - { p_r \over 100}) $$
 
 Where:
   - $h_A [m]$: antenna height
   - $r_i [m]$: lower Fresnel radius
   - $r_l [m]$: line of sight
-  - $%$: percentage of the free radius
+  - $p_r$: percentage of the free radius
 
 Finally, the reception power of the link is calculated as follows:
 $$P_r = EIRP - 20 \cdot log({4 \pi d \over \lambda}) + G_r$$
