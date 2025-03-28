@@ -1,6 +1,6 @@
 from io import open
 
-def extraer_info(ruta):
+def extract_info(ruta):
 
 	archivo=open(ruta,"r")
 	archivo.seek(len(archivo.readline()))
