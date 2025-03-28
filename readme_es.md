@@ -22,7 +22,9 @@ En el repositorio se pueden observar a modo de ejemplo los casos [Mina](./Script
 ### Parámetros de configuración
 - Radio de Fresnel (n): es el número de zonas que se deben considerar libres (en un determinado porcentaje de su radio) para evitar una interferencia destructiva que cause una reducción de la potencia de la señal o cancelación por fase, debido a los fenómenos del medio como absorción atenuación, difracción, interferencia, refracción y reflexión.
 Es posible imaginar las zonas de fresnel como varias elipises en 3D, las cuales tienen la misma distancia entre las antenas d1 y d2, para cada una dispone de un radio r cada vez mayor.
+
 ![Zona de Fresnel](./Scripts/Docs/fresnel_zone.png){style="display: block; margin: 0 auto" }
+
 A partir de este valor, el radio de la n-esima zona de Fresnel se calcula como:
 $$
 r_n = \sqrt{{d_1 \cdot d_2 \cdot \lambda \cdot n} \over {d_1 + d_2} }
@@ -35,7 +37,9 @@ Donde:
 - Lambda (mm): longitud de onda de la señal transmitida, expresada en mm.
 - Porcentaje del radio (%): porcentaje del n-esimo radio de Fresnel que debe estar libre.
 - Factor de corrección K: corrección de altura de los obstáculos, debido a la curvatura terrestre y las condiciones atomsféricas, de acuerdo con el modelo de Tierra Ficticia. El estándar es *k=4/3*.
+
 ![Tierra Ficticia](./Scripts/Docs/fictitial_earth.png){style="display: block; margin: 0 auto" }
+
 Como resultado, se modifica el radio de la tierra, modificando así la altura de los obstáculos, de acuerdo con la siguiente expresión:
 $$
 f = {d_1 \cdot d_2 \over 2\cdot k \cdot r_t}
@@ -46,7 +50,9 @@ Donde:
   - $d_2 [m]$: distancia entre el receptor y el obstáculo
   - $k$: factor de corrección
   - $r_t [m]$: radio de la tierra
+
 ![Altitud obstáculos](./Scripts/Docs/height_obstacles.png){style="display: block; margin: 0 auto" }
+
 
   Utilizando el factor de corrección $f$, obtenemos la altura aparente del obstáculo:
 $$

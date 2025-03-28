@@ -22,7 +22,9 @@ Example cases can be found in the repository, such as [Mina](./Scripts/Assets/Mi
 ### Configuration Parameters
 - Fresnel Radius (n): Represents the number of zones that must remain clear (by a certain percentage of their radius) to avoid destructive interference that could reduce signal power or cause phase cancellation due to environmental effects such as absorption, attenuation, diffraction, interference, refraction, and reflection.
 The Fresnel zones can be visualized as several 3D ellipses that maintain the same distance between antennas d1 and d2, with each having an increasingly larger radius.
+
 ![Fresnel Zone](./Scripts/Docs/fresnel_zone.png){style="display: block; margin: 0 auto" }
+
 The radius of the nth Fresnel zone is calculated as:
 $$
 r_n = \sqrt{{d_1 \cdot d_2 \cdot \lambda \cdot n} \over {d_1 + d_2} }
@@ -35,7 +37,9 @@ Where:
 - Lambda (mm): Wavelength of the transmitted signal, expressed in millimeters.
 - Percentage of the Radius (%): The percentage of the nth Fresnel radius that must remain clear.
 - Correction Factor K: Adjusts obstacle height due to Earth's curvature and atmospheric conditions, following the Effective Earth Radius Model. The standard value is *k=4/3*.
+
 ![Effective Earth Radius Model](./Scripts/Docs/fictitial_earth.png){style="display: block; margin: 0 auto" }
+
 This adjustment modifies the Earth's radius, affecting obstacle height, as calculated by:
 $$
 f = {d_1 \cdot d_2 \over 2\cdot k \cdot r_t}
@@ -46,7 +50,9 @@ Where:
   - $d_2 [m]$: distance from the receiver to the obstacle
   - $k$: correction factor
   - $r_t [m]$: Earth's radius
+
 ![Height obstacles](./Scripts/Docs/height_obstacles.png){style="display: block; margin: 0 auto" }
+
 
   Using the correction factor $f$, the apparent obstacle height is:
 $$
