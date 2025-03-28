@@ -26,9 +26,7 @@ The Fresnel zones can be visualized as several 3D ellipses that maintain the sam
 ![Fresnel Zone](./Scripts/Docs/fresnel_zone.png)
 
 The radius of the nth Fresnel zone is calculated as:
-$$
-r_n = \sqrt{{d_1 \cdot d_2 \cdot \lambda \cdot n} \over {d_1 + d_2} }
-$$
+$$r_n = \sqrt{{d_1 \cdot d_2 \cdot \lambda \cdot n} \over {d_1 + d_2} }$$
 Where:
   - $r_n$: radius of the nth Fresnel zone
   - $d_1 [m]$: distance between the transmitter and the center of the ellipsoid
@@ -41,9 +39,7 @@ Where:
 ![Effective Earth Radius Model](./Scripts/Docs/fictitial_earth.png)
 
 This adjustment modifies the Earth's radius, affecting obstacle height, as calculated by:
-$$
-f = {d_1 \cdot d_2 \over 2\cdot k \cdot r_t}
-$$
+$$f = {d_1 \cdot d_2 \over 2\cdot k \cdot r_t}$$
 Where:
   - $f [m]$: real obstacle height correction
   - $d_1 [m]$: distance from the transmitter to the obstacle
@@ -55,34 +51,26 @@ Where:
 
 
   Using the correction factor $f$, the apparent obstacle height is:
-$$
-h_a = h_r + f
-$$
+$$h_a = h_r + f$$
 Where:
   - $h_a [m]$: apparent height of the obstacle
   - $h_r [m]$: real height of the obstacle
   - $f [m]$: correction factor
 - Antenna Gain [dBi]: Increase in received power in the antenna's maximum radiation direction relative to an isotropic antenna:
-$$
-G = 10\cdot log[4\pi {U(max) \over P(in)} ]
-$$
+$$G = 10\cdot log[4\pi {U(max) \over P(in)} ]$$
 Where:
   - G [dBi]: antenna gain
   - U(max) [dBm]: radiation intensity of the antenna in the maximum direction
   - P(in) [dBm]: input power to the antenna
 - EIRP: Transmitted power by the antenna:
-$$
-EIRP = P_t - A_c + G_a
-$$
+$$EIRP = P_t - A_c + G_a$$
 Where:
   - $P_t [dBm]$: transmitted power
   - $A_c [dB]$: cable attenuation
   - $G_a [dBi]$: antenna gain
 ### Link Calculation
 From the calculation of the distance between the link's endpoints (and each of the intermediate points), the upper and lower Fresnel radii (with their respective inclinations), and the apparent height of obstacles, the required antenna height is determined to ensure that no obstacle surpasses the line-of-sight of the point-to-point link, along with the required clearance percentage of the lower Fresnel radius:
-$$
-h_A = r_i + (r_l - r_i) \cdot (1-{\% \over 100})
-$$
+$$h_A = r_i + (r_l - r_i) \cdot (1-{\% \over 100})$$
 Where:
   - $h_A [m]$: antenna height
   - $r_i [m]$: lower Fresnel radius
@@ -90,9 +78,7 @@ Where:
   - $%$: percentage of the free radius
 
 Finally, the reception power of the link is calculated as follows:
-$$
-P_r = EIRP - 20 \cdot log({4 \pi d \over \lambda}) + G_r
-$$
+$$P_r = EIRP - 20 \cdot log({4 \pi d \over \lambda}) + G_r$$
 Where:
   - $P_r [dBm]$: received power
   - $EIRP [dBm]$: transmitted power by the antenna
