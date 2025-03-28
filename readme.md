@@ -70,7 +70,8 @@ Where:
   - $G_a [dBi]$: antenna gain
 ### Link Calculation
 From the calculation of the distance between the link's endpoints (and each of the intermediate points), the upper and lower Fresnel radii (with their respective inclinations), and the apparent height of obstacles, the required antenna height is determined to ensure that no obstacle surpasses the line-of-sight of the point-to-point link, along with the required clearance percentage of the lower Fresnel radius:
-$$h_A = r_i + (r_l - r_i) \cdot (1-{\% \over 100})$$
+$$ h_A = r_i + (r_l - r_i) \cdot (1 - {\frac{\%}{100}}) $$
+
 Where:
   - $h_A [m]$: antenna height
   - $r_i [m]$: lower Fresnel radius
