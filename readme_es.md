@@ -70,7 +70,7 @@ Donde:
   - $G_a [dBi]$: ganancia de la antena
 ### Cálculo de enlace
 A partir del cálculo de la distancia entre los extremos del enlace (y cada uno de los puntos intermedios), los radios superior e inferior de Fresnel (con sus respectivas inclinaciones) y la altura aparente de los obstáculos, se calcula la altura que deben tener las antenas, de modo que ningún obstáculo pueda superar la línea de vista del enlace punto a punto, en conjunto con el porcentaje del radio inferior de Fresnel que debe permanecer visible:
-$$ h_A = r_i + (r_l - r_i) \cdot (1 - {p_r \over 100}) $$
+$$ h_A = r_i + (r_l - r_i) \cdot \left( 1 - \frac{p_r}{100} \right) $$
 
 
 Donde:
